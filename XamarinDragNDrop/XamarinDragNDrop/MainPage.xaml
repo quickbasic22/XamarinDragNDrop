@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinDragNDrop.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Drag &amp; Drop Example" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Entry x:Name="DropZone2" Text="28 50 52" BackgroundColor="LightBlue">
+            <Entry.GestureRecognizers>
+                <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting" />
+                <DropGestureRecognizer AllowDrop="True" Drop="DropGestureRecognizer_Drop_1" />
+            </Entry.GestureRecognizers>
+        </Entry>
+        <Entry x:Name="DropZone" Text="" BackgroundColor="LightCyan" FontSize="16">
+            <Entry.GestureRecognizers>
+                <DropGestureRecognizer AllowDrop="True" Drop="DropGestureRecognizer_Drop" />
+                <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting_1" />
+            </Entry.GestureRecognizers>
+        </Entry>
+        
+    </StackLayout>
+
+</ContentPage>

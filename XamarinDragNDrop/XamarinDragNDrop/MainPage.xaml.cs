@@ -37,5 +37,10 @@ namespace XamarinDragNDrop
         {
 
         }
+         
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            MyEntry.Text = "Hello World! Its currently " + DateTime.Now.ToLongDateString();
+        }
     }
 }

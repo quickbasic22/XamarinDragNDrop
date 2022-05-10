@@ -19,6 +19,11 @@
                 <DragGestureRecognizer CanDrag="True" DragStarting="DragGestureRecognizer_DragStarting_1" />
             </Entry.GestureRecognizers>
         </Entry>
+        <Label x:Name="MyEntry" Text="2022">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
+            </Label.GestureRecognizers>
+        </Label>
         
     </StackLayout>
 
